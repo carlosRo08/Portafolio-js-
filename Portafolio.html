@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste para móviles -->
+  <title>Librerías JS</title>
+
+  <!-- jQuery desde CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      background: #BEDAED;
+      color: black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .perfil {
+      display: flex;
+      align-items: center;
+      border: 2px solid #333;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .perfil img {
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body onload="mensajeCarga()">
+  <h1 id="titulo">Bienvenido a mi portafolio digital</h1>
+
+  <script>
+    function mensajeCarga() {
+      alert("La página terminó de cargarse correctamente, puede ingresar");
+      document.getElementById("titulo").style.color="#7A0707";
+      setTimeout(function() {
+        document.getElementById("titulo").style.display = "none";
+      }, 4000);
+    }
+
+    function imgGrande(x) {
+      x.style.width = "200px";
+      x.style.height = "200px";
+    }
+
+    function imgNormal(x) {
+      x.style.width = "150px";
+      x.style.height = "150px";
+    }
+
+    // Un solo bloque jQuery para todos los enlaces
+    $(document).ready(function(){
+      $("a").click(function(){
+        console.log("El usuario abrió un enlace del portafolio");
+      });
+    });
+  </script>
+
+<h2>Portafolio final de JavaScript donde coloqué algunas asignaciones como evidencia</h2>
+  <div class="perfil">
+    <img src="https://wecpanama.org/wp-content/uploads/2017/12/logo-inadeh.png"
+         onmouseover="imgGrande(this)" 
+         onmouseout="imgNormal(this)">
+    <div>
+      <h3>Estudiante:</h3>
+      <p>Carlos Rodríguez</p>
+      <h3>Cédula:</h3>
+      <p>8-1000-1833</p>
+    </div>
+  </div>
+
+
+  <h3>Talleres</h3>
+
+  <details>
+    <summary>Taller Práctico 1:</summary>
+    <p>Formas de ejecución de script</p>
+    <a href="https://gist.github.com/carlosRo08/d409bca5ef44e963855d9dd9e9480e11" target="_blank">Suma</a>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Taller Práctico 2:</summary>
+    <p>Comentarios en javascript y html</p>
+    <a href="https://gist.github.com/carlosRo08/3bf02d32cda2813baf6a14836ca7e4c2" target="_blank">Multiplicación_comentarios</a>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Taller Práctico 3:</summary>
+    <p>Declarar variables</p>
+    <a href="https://gist.github.com/carlosRo08/fa1da0ff2fe044426eb9cff8e67f0670" target="_blank">Promedio</a>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Taller Práctico 4a:</summary>
+    <p>Estructuras de Control. Método Alert</p>
+    <a href="https://gist.github.com/carlosRo08/898c58e2fec852fcfe5f7efc4bbb3ad1" target="_blank">Estructura de control con alert</a>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Taller Práctico 4b:</summary>
+    <p>Función de salida. Método document.write</p>
+    <a href="https://gist.github.com/carlosRo08/6194f2c6d2a7b99aa8b87c708318b290" target="_blank">Función de salida con document.write</a>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Taller Práctico 5:</summary>
+    <p>Investigar acerca de un Framework para JavaScript</p>
+    <a href="https://docs.google.com/document/d/1a2MuzZXXiL-eH9-as3xuemwAAwGa4jaCiv7bh2XG9_U/edit?usp=sharing" target="_blank">Framework investigado</a>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Taller Práctico 6:</summary>
+    <p>Estructuras de Control con FOR</p>
+    <a href="https://gist.github.com/carlosRo08/536ad9d0fd03d32ae63fa2b4b42d8212" target="_blank">Estructuras de Control con FOR</a>
+  </details>
+  <hr>
+<br>
+<br>
+  <h3>Conclusión</h3>
+  <div class="perfil">
+    <p>
+      El curso de JavaScript en el INADEH me permitió comprender los fundamentos de la programación y aplicarlos en ejercicios prácticos que reforzaron mi aprendizaje. A través de los talleres desarrollados, aprendí a manejar variables, estructuras de control, funciones de salida y el uso de librerías como jQuery, lo que me dio una visión más clara de cómo se construyen aplicaciones dinámicas en la web.
+    </p>
+  </div>
+</body>
+</html>
